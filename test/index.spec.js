@@ -41,8 +41,8 @@ describe('POST /tasks', () => {
         test('Should return 400 status code', async () => {
             const fields = [
                 {},
-                {title: "Test task"},
-                {description: "Test description"}
+                { title: "Test task" },
+                { description: "Test description" }
             ];
             for (const body of fields) {
                 const response = await request(app).post('/tasks').send(body);
